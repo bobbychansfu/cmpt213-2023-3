@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"TriangleHelper","l":"computeArea(double, double)","u":"computeArea(double,double)"},{"p":"<Unnamed>","c":"TriangleHelper","l":"TriangleHelper()","u":"%3Cinit%3E()"}];updateSearchResults();
