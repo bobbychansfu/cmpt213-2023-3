@@ -3,10 +3,16 @@ package ca.sfu.cmpt213.rectangle;
 public class Rectangle {
     private double length;
     private double width;
+    private static int totalRectangles = 0;
 
     public Rectangle(double l, double w){
         length = l;
         width = w;
+        totalRectangles ++;
+    }
+
+    public static int getTotalRectangles(){
+        return totalRectangles;
     }
 
     public double getLength() {
