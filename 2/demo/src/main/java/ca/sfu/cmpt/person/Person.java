@@ -1,6 +1,6 @@
 package ca.sfu.cmpt.person;
 
-public class Person implements Displayable {
+public class Person implements Displayable, Comparable<Person>{
     String name;
     int age;
 
@@ -30,5 +30,10 @@ public class Person implements Displayable {
         System.out.println("\n    ^      ^ \n @( ' (..) ') < ( My name is " + name + " and I'm " + age + " ) \n");
     }
 
+    @Override
+    public int compareTo(Person otherPerson) {
+        // returns int based on relativity of this vs otherPerson
+        return 0;
+    }
     
 }

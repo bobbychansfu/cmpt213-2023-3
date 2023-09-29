@@ -12,8 +12,7 @@ class Outer{
     private static String message = "HelloWorld";
 
     private static class Stat{
-        public void display(){
-           
+        public void display(){         
             System.out.println("Message from nested static class : " + message);
         }
     }
@@ -34,13 +33,32 @@ class Outer{
         obj.print();
     }
 
-    public void display_ann(){
+    public void display_anon(){
         // anon class
-        
+        Displayable displayable = new Displayable() {
+            @Override
+            public void display(){
+                System.out.println("Message from anon class: " + message);
+            }
+        };
+        displayable.display();
     }
 
     public static void main(String... args){
-    
+        Outer.Stat printer = new Outer.Stat();
+        printer.display(); // Static method of static class
+
+        Outer outer = new Outer();
+        Outer.InnerNonStat inner = outer.new InnerNonStat();
+        inner.display();  // non-static inner class
+        Outer.InnerNonStat inner2 = new Outer().new InnerNonStat();
+        inner2.display(); // non-static inner class
+
+        // local inner class
+        outer.display();
+
+        // call anon inner class
+        outer.display_anon();
 
     }
 
