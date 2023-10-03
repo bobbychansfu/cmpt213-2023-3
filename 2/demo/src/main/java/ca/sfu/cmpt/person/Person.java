@@ -27,13 +27,13 @@ public class Person implements Displayable, Comparable<Person>{
 
     @Override
     public void display() {
-        System.out.println("\n    ^      ^ \n @( ' (..) ') < ( My name is " + name + " and I'm " + age + " ) \n");
+        System.out.println(" ( ' (..) ' ) < ( My name is " + name + " and I'm " + age + " ) ");
     }
 
     @Override
     public int compareTo(Person otherPerson) {
         // returns int based on relativity of this vs otherPerson
-        return 0;
+        return this.name.compareTo(otherPerson.getName());
     }
     
 }
