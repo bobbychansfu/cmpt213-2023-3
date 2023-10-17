@@ -24,10 +24,10 @@ public class Person implements Displayable, Comparable<Person>
    // display method
 
    @Override
-   public void display(int lead){
-      if (lead == _NAME)
+   public void display(Leading lead){
+      if (lead == Leading.NAME)
          System.out.println(name + " : " + age);
-      else if (lead == _AGE)
+      else if (lead == Leading.AGE)
          System.out.println(age + " : " + name);
    }
 
