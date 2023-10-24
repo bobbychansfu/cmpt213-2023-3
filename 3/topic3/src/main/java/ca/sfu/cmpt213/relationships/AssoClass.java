@@ -6,7 +6,7 @@ public class AssoClass {
     class Employment {
         private Company c;
         private Employee e;
-        private float salaray;
+        private float salary;
         private String startDate;
         // ...
     }
