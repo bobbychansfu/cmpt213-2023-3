@@ -11,16 +11,15 @@ public class Consistency {
         int day = 23;
         int yr = 2019;
         Calendar gc = new GregorianCalendar(yr, month - 1, day);
-        System.out.println(gc);
+        // System.out.println(gc);
 
         // Example 2:
         String s1 = "hello world";
         String s2 = "HElLO WORld";
         
-
         System.out.println(s1.equals(s2));
         System.out.println(s1.equalsIgnoreCase(s2));
         System.out.println();
-
+        System.out.println(s1.regionMatches(true, 0, s2, 0, 5));
     }
 }

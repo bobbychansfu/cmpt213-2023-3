@@ -12,7 +12,6 @@ public class Inputs {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String line1 = reader.readLine();
 		
-		
 		// With Java 5.0
 		Scanner scanner = new Scanner(System.in);
 		String line2 = scanner.nextLine();
