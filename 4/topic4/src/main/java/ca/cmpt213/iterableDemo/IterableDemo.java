@@ -1,5 +1,7 @@
 package ca.cmpt213.iterableDemo;
 
+import ca.cmpt213.sharedreference.Person;
+
 public class IterableDemo {
 	public static void main(String args[]) {
 		Degree sosyMajor = new Degree("SOSY Major");
@@ -15,8 +17,8 @@ public class IterableDemo {
 			System.out.println(" " + c);
 		}
 
-//		for (Course course : sosyMajor.courses()) {
-//			System.out.println("  " + course);
-//		}
+		for (Person student : sosyMajor.students()) {
+			System.out.println("  " + student);
+		}
 	}
 }

@@ -22,6 +22,6 @@ public class Person {
         return this.name;
     }
     public Date getBirthday() {
-        return this.birthday;
+        return (Date) this.birthday.clone();
     }
 }

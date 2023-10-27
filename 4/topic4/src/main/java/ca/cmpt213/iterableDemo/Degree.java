@@ -28,7 +28,8 @@ public class Degree implements Iterable<Course>{
 	 */
 	@Override
 	public Iterator<Course> iterator() {
-		return courses.iterator();
+		//return courses.iterator();
+		return Collections.unmodifiableCollection(courses).iterator();
 	}
 	
 	/**

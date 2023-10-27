@@ -1,7 +1,8 @@
 package ca.cmpt213.iterableDemo;
 
+import java.util.Iterator;
 
-public class Matrix{
+public class Matrix implements Iterable<Integer>{
 	public final int NUM_ROWS;
 	public final int NUM_COLS;
 	private int[][] values;
@@ -38,6 +39,32 @@ public class Matrix{
 		return ret;
 	}
 
-
+	@Override
+	public Iterator<Integer> iterator(){
+		
+		return new Iterator<Integer>() {
+			int row = 0;
+			int column = 0;
+			@Override
+			public boolean hasNext() {
+				return (row < NUM_ROWS) && (column < NUM_COLS);
+			}
+			@Override
+			public Integer next(){
+				Integer item = values[row][column];
+				column++;
+				if (column >= NUM_COLS) {
+					column = 0;
+					row++;
+				}
+				return item;
+			}
+			@Override
+			public void remove() {
+				throw new UnsupportedOperationException();
+			}
+		};
+		
+	}
 
 }
