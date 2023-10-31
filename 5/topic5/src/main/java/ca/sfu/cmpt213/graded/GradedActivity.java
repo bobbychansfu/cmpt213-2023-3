@@ -6,19 +6,16 @@ package ca.sfu.cmpt213.graded;
 
 public class GradedActivity
 {
-  // private double score;  // Numeric score
-   protected double score;
+   private double score;
 
    public void setScore(double s)
    {
       score = s;
    }
-
    public double getScore()
    {
       return score;
    }
-
 
    public String getGrade()
    {

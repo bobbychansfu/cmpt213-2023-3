@@ -26,14 +26,6 @@
       <version>4.13.2</version>
     </dependency>
 
-
-    <!-- <dependency>
-      <groupId>org.testifyproject.junit5</groupId>
-      <artifactId>junit5</artifactId>
-      <version>1.0.6</version>
-      <type>pom</type>
-    </dependency> -->
-
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

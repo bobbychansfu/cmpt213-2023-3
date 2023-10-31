@@ -1,18 +1,25 @@
 package ca.sfu.cmpt213.graded;
 
 /**
-   This class determines the grade for a final exam.
+   This class determines a passing or failing grade for
+   an exam.
 */
 
-public class FinalExam extends GradedActivity
+public class PassFailExam extends GradedActivity
 {
    private int numQuestions;  // Number of questions
    private double pointsEach; // Points for each question
-   private int numMissed;     // Questions missed
+   private int numMissed;     // Number of questions missed
+   private int MINPASSING = 50;
 
-   public FinalExam(int questions, int missed)
+
+   public PassFailExam(int questions, int missed)
    {
-      double numericScore;  // To hold a numeric score
+      // Call the superclass constructor.
+      super();
+
+      // Declare a local variable for the score.
+      double numericScore;
 
       // Set the numQuestions and numMissed fields.
       numQuestions = questions;
@@ -23,7 +30,7 @@ public class FinalExam extends GradedActivity
       pointsEach = 100.0 / questions;
       numericScore = 100.0 - (missed * pointsEach);
 
-      // Call the inherited setScore method to
+      // Call the superclass's setScore method to
       // set the numeric score.
       setScore(numericScore);
    }
@@ -32,9 +39,19 @@ public class FinalExam extends GradedActivity
    {
       return pointsEach;
    }
+
    public int getNumMissed()
    {
       return numMissed;
    }
 
+   @Override
+   public String getGrade(){
+      if (getScore() >= MINPASSING){
+         return "P";
+      }
+      else{
+         return "F";
+      }
+   }
 }
