@@ -16,7 +16,6 @@ public class GradedActivity
    {
       return score;
    }
-
    public String getGrade()
    {
       String letterGrade;

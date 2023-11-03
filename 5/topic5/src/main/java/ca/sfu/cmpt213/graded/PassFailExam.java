@@ -12,7 +12,6 @@ public class PassFailExam extends GradedActivity
    private int numMissed;     // Number of questions missed
    private int MINPASSING = 50;
 
-
    public PassFailExam(int questions, int missed)
    {
       // Call the superclass constructor.
@@ -25,12 +24,9 @@ public class PassFailExam extends GradedActivity
       numQuestions = questions;
       numMissed = missed;
 
-      // Calculate the points for each question and
-      // the numeric score for this exam.
       pointsEach = 100.0 / questions;
-      numericScore = 100.0 - (missed * pointsEach);
+      numericScore = 100.0 - (missed * pointsEach); 
 
-      // Call the superclass's setScore method to
       // set the numeric score.
       setScore(numericScore);
    }
