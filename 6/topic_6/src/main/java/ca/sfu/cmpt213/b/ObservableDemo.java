@@ -1,0 +1,52 @@
+package ca.sfu.cmpt213.b;
+
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+/**
+ * JavaFX App
+ */
+public class ObservableDemo extends Application {
+
+    public static void main(String[] args) {
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        
+        Label l1 = new Label("Label 1");
+        Label l2 = new Label("Label 2");
+        Label l3 = new Label("Label 3");
+
+        VBox vbox = new VBox(10);
+        vbox.getChildren().addAll(l1,l2,l3);
+
+        Button b = new Button("remove");
+        b.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent evt){
+                vbox.getChildren().remove(0);
+            }
+        });
+
+        HBox hb = new HBox(b,vbox);
+
+        Scene scene = new Scene(hb,640,480);
+
+        primaryStage.setScene(scene);
+
+        primaryStage.show();
+
+    }
+
+}

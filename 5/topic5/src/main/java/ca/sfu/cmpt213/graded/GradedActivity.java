@@ -6,7 +6,7 @@ package ca.sfu.cmpt213.graded;
 
 public class GradedActivity
 {
-   private double score;
+   protected double score;
 
    public void setScore(double s)
    {

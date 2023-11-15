@@ -1,0 +1,15 @@
+.labels {
+   -fx-text-alignment: center;
+   -fx-font-family: cursive;
+   -fx-font-size: 14pt;
+   -fx-font-style: italic;
+   -fx-font-weight: bold;
+   -fx-border-style: dotted;
+   -fx-background-color: #e4f433;
+}
+
+#customvb {
+   -fx-border-radius: 50px;
+   -fx-border-width: 5px;
+   -fx-border-color: black;
+}

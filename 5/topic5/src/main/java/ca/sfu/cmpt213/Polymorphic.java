@@ -14,7 +14,12 @@ public class Polymorphic
    {
       GradedActivity[] tests = new GradedActivity[3];
       
-      
+      tests[0] = new GradedActivity();
+      tests[0].setScore(95);
+
+      tests[1] = new FinalExam(50, 7);
+      tests[2] = new PassFailExam(20, 5);
+
 
       for (int i = 0; i < tests.length; i++) {
          System.out.println("Test " + (i + 1) + ": " +

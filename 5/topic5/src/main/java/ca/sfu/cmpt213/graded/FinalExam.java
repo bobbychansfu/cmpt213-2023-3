@@ -20,7 +20,7 @@ public class FinalExam extends GradedActivity
       numericScore = 100.0 - (missed * pointsEach);
 
       // set the numeric score.
-      setScore(numericScore);
+      this.score = numericScore;
    }
 
    public double getPointsEach()

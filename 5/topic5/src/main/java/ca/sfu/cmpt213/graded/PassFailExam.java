@@ -30,12 +30,10 @@ public class PassFailExam extends GradedActivity
       // set the numeric score.
       setScore(numericScore);
    }
-
    public double getPointsEach()
    {
       return pointsEach;
    }
-
    public int getNumMissed()
    {
       return numMissed;
