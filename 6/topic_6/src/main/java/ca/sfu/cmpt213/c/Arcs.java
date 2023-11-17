@@ -21,8 +21,8 @@ public class Arcs extends Application
    public void start(Stage primaryStage)
    {
       // Constants for the scene size
-      final double SCENE_WIDTH = 320.0;
-      final double SCENE_HEIGHT = 240.0;
+      final double SCENE_WIDTH = 640.0;
+      final double SCENE_HEIGHT = 480.0;
       
       // Common attributes for the arcs
       final double X = 160.0;
@@ -60,7 +60,7 @@ public class Arcs extends Application
       pieSlice3.setFill(Color.BLACK);
       pieSlice3.setType(ArcType.ROUND);
 
-      Ellipse myEllipse = new Ellipse(320, 240, 140, 100);
+      Ellipse myEllipse = new Ellipse(400, 350, 140, 100);
       myEllipse.setFill(Color.AQUA);
 
       // Add the objects to a Pane.
