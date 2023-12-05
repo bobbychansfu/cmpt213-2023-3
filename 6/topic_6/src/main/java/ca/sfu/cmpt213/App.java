@@ -21,7 +21,7 @@ import java.net.URL;
  *  A Client Demo
  */
 
-public class Client extends Application
+public class App extends Application
 {
     public static void main(String[] args)
     {
