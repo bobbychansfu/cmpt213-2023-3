@@ -2,6 +2,7 @@ package ca.sfu.cmpt213.files;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+// import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -21,11 +22,19 @@ public class FileWrite {
         
         File file = new File(filename);
         PrintWriter outputFile = new PrintWriter(file);
-
+        
         for (int i=1; i<=numFriends; i++){
             friendName = keyboard.nextLine();
             outputFile.println(friendName);
         }
+
+        // FileWriter fileWriter = new FileWriter(file, true);
+
+        // for (int i=1; i<=numFriends; i++){
+        //     System.out.print("Enter the name of friend " + i + ": ");
+        //     friendName = keyboard.nextLine();
+        //     fileWriter.write(friendName + "\n");
+        // }
 
         keyboard.close();
         outputFile.close();

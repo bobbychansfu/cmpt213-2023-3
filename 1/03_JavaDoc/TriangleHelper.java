@@ -5,7 +5,7 @@
  */
 public class TriangleHelper {
     /**
-     * <a href="triangle.com">INFO</a>
+     * <a href="https://www.sfu.ca">INFO</a>
      * @param a length of the triangle
      * @param b height of the triangle
      * @return area

@@ -25,6 +25,13 @@ public class Main
         boxes.add(r1);
         boxes.add(r2);
         boxes.remove(0); 
+        for (Rectangle r : boxes) {
+            System.out.println(r);
+        }
 
+       
+        
+        
+        
     }
 }

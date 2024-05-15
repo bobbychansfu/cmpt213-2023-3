@@ -14,11 +14,11 @@ public class Input {
             lname = input.next();
             System.out.print("Enter your age: ");
             age = input.nextInt();
-            input.nextLine(); // consume EOL
+            //input.nextLine(); // consume EOL
             System.out.print("Enter your phone: ");
             phone = input.nextLine();
             input.close();
-            System.out.println("Fname: "+fname+" lname: "+lname+"\nage: " + age + "\nphone: "+phone);
+            System.out.println("\nFname: "+fname+" lname: "+lname+"\nage: " + age + "\nphone: "+phone);
 
         }
         catch (Exception e) {
