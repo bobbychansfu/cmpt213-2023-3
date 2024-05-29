@@ -27,7 +27,7 @@ public class Person implements Displayable, Comparable<Person>{
 
     @Override
     public void display() {
-        System.out.println(" ( ' (..) ' ) < ( My name is " + name + " and I'm " + age + " ) ");
+        System.out.println(" ( ' (..) ' ) < ( My name is " + name + " and I'm " + age + " ) "); 
     }
 
     @Override

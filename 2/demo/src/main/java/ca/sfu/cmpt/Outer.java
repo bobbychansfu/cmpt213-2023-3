@@ -15,6 +15,9 @@ class Outer{
         public void display(){         
             System.out.println("Message from nested static class : " + message);
         }
+        public static void display2(){
+            System.out.println("Message from nested static class2 : " + message);
+        }
     }
 
     private class InnerNonStat{
@@ -46,7 +49,8 @@ class Outer{
 
     public static void main(String... args){
         Outer.Stat printer = new Outer.Stat();
-        printer.display(); // Static method of static class
+        printer.display(); // Non-Static method of static class
+        Outer.Stat.display2(); // Static method of static class
 
         Outer outer = new Outer();
         Outer.InnerNonStat inner = outer.new InnerNonStat();

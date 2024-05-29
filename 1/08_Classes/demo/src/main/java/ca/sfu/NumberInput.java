@@ -10,6 +10,10 @@ public class NumberInput {
     public static void main(String[] args) {
         int age;
         Scanner in = new Scanner(System.in);
+        // enter 5 names
+        
+        int[] numbers = {1,2,3,4,5};
+        System.out.println(numbers[7]);
 
         try { 
             age = in.nextInt();
@@ -20,7 +24,7 @@ public class NumberInput {
 
         }
         catch (InputMismatchException e) {
-            
+            System.out.println("Invalid input");
         }
         
     }

@@ -16,7 +16,7 @@ public class DemoFileFilter {
             System.out.println("file: " + subFile.getAbsolutePath());
         }
     }
-
+    
     private static void demoClassFilter() {
         FileFilter filter = new TxtFilter();
         File folder = new File("./files");
