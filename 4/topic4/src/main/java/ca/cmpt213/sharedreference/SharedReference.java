@@ -21,7 +21,7 @@ public class SharedReference {
         System.out.println(jacob.getBirthday());
     }
 
-    private static exploitConstructor() {
+    private static void exploitConstructor() {
         Date now = new Date();
         Person jacob = new Person("Jacob", 0, now);
         System.out.println(jacob.getBirthday());
