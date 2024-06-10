@@ -3,6 +3,7 @@ package ca.sfu.cmpt.person;
 public class Person implements Displayable, Comparable<Person>{
     String name;
     int age;
+    Address address;
 
     public Person(String n, int a) {
         name =n;
@@ -34,6 +35,11 @@ public class Person implements Displayable, Comparable<Person>{
     public int compareTo(Person otherPerson) {
         // returns int based on relativity of this vs otherPerson
         return this.name.compareTo(otherPerson.getName());
+    }
+
+    @Override
+    public String toString() {
+        return "( ' (..) ' ) < I'm " + this.name + ". I'm " + this.age + "!";
     }
     
 }
