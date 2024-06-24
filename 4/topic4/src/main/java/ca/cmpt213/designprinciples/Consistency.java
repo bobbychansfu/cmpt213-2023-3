@@ -15,7 +15,7 @@ public class Consistency {
 
         // Example 2:
         String s1 = "hello world";
-        String s2 = "HElLO WORld";
+        String s2 = "hello WORld";
         
         System.out.println(s1.equals(s2));
         System.out.println(s1.equalsIgnoreCase(s2));

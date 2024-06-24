@@ -33,4 +33,12 @@ public class GradedActivity
 
       return letterGrade;
    }
+
+   // override equals method
+
+   @Override
+   public boolean equals(Object other) {
+      GradedActivity otherGradedActivity = (GradedActivity) other;
+      return this.score == otherGradedActivity.score;
+   }
 }

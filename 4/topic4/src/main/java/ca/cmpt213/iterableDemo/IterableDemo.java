@@ -1,5 +1,7 @@
 package ca.cmpt213.iterableDemo;
 
+import java.util.Iterator;
+
 import ca.cmpt213.sharedreference.Person;
 
 public class IterableDemo {
@@ -12,6 +14,11 @@ public class IterableDemo {
 		sosyMajor.addCourse(new Course("CMPT 373"));
 		
 		System.out.println(sosyMajor + " includes:");
+
+		// malicious code
+		Iterator<Course> itr = sosyMajor.iterator();
+		itr.next();
+		itr.remove();
 
 		for (Course c : sosyMajor){
 			System.out.println(" " + c);
