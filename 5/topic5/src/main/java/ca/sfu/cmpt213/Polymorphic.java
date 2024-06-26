@@ -13,6 +13,10 @@ public class Polymorphic
    public static void main(String[] args)
    {
       GradedActivity[] tests = new GradedActivity[3];
+
+      // do first
+      GradedActivity ga = new PassFailExam(20, 0);
+      ((PassFailExam) ga).getPointsEach();
       
       tests[0] = new GradedActivity();
       tests[0].setScore(95);
