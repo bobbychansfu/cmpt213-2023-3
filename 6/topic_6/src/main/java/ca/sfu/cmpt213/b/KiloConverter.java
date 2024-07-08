@@ -38,6 +38,12 @@ public class KiloConverter extends Application
       
       // Create a TextField for input.
       kiloTextField = new TextField();
+
+      kiloTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+         if (!newValue.matches("\\d{0,7}([\\.]\\d{0,4})?")) {
+            kiloTextField.setText(oldValue);
+         }
+      });
       
       // Create a Button to perform the conversion.
       Button calcButton = new Button("Convert");
@@ -80,8 +86,8 @@ public class KiloConverter extends Application
     class CalcButtonHandler implements EventHandler<ActionEvent> {
       @Override
       public void handle(ActionEvent evt) {
-         Double km = Double.parseDouble(kiloTextField.getText());
-         Double miles = km * 0.6;
+         double km = Double.parseDouble(kiloTextField.getText());
+         double miles = km * 1.60934;
          resultLabel.setText(String.format("%,.2f", miles));
       }
     }

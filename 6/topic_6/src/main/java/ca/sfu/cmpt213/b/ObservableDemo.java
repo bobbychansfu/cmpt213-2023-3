@@ -11,6 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Random;
 
 /**
  * JavaFX App
@@ -36,6 +37,17 @@ public class ObservableDemo extends Application {
             @Override
             public void handle(ActionEvent evt){
                 vbox.getChildren().remove(0);
+            }
+        });
+
+        Button b2 = new Button("add");
+        b2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent evt){
+                // random number
+                Random r = new Random();
+                int n = r.nextInt(100);
+                vbox.getChildren().add(0,new Label("Label" + n));
             }
         });
 

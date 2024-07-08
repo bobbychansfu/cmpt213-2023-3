@@ -18,7 +18,7 @@ public class ButtonDemo extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        // scene = new Scene(loadFXML("primary"), 640, 480);
+        
         Label label = new Label("Click below");
         Button button = new Button("Click ME");
 

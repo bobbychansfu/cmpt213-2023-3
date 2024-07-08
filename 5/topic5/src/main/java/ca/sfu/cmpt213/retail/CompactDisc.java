@@ -45,15 +45,7 @@ public class CompactDisc implements RetailItem
       return artist;
    }
 
-   /**
-      getRetailPrice method (Required by the RetailItem
-      interface)
-      @return The retail price of the CD.
-   */
+ 
 
-   @Override
-   public double getRetailPrice()
-   {
-      return retailPrice;
-   }
+   
 }

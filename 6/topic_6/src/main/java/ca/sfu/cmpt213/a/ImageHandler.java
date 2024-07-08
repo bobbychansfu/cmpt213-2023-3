@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -38,7 +39,41 @@ public class ImageHandler extends Application
        ImageView finlandIView = new ImageView(finlandImage);
        ImageView germanyIView = new ImageView(germanyImage);
 
-       finlandIView.addEventHandler(MouseEvent.MOUSE_CLICKED, new ImageClickHandler());
+
+
+
+       // ADD EVENT HANDLERS
+       finlandIView.addEventHandler(MouseEvent.MOUSE_ENTERED, new EventHandler<MouseEvent>() {
+         @Override
+         public void handle(MouseEvent mouseEvent) {
+             ((ImageView)mouseEvent.getSource()).setImage(germanyImage);
+         }
+     });
+
+       finlandIView.addEventHandler(MouseEvent.MOUSE_EXITED, new EventHandler<MouseEvent>(){
+            @Override
+            public void handle(MouseEvent evt) {
+               System.out.println(evt.getSource());
+               ((ImageView)evt.getSource()).setImage(finlandImage);
+            }
+         });
+
+
+         germanyIView.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                System.out.println(mouseEvent.getSource());
+                System.out.println(mouseEvent.getEventType());
+                System.out.println(mouseEvent.getX());
+                System.out.println(mouseEvent.getY());
+            }
+         
+         
+         });
+
+
+
+
 
        // Create a Label control.
        Label messageLabel = new Label("Flags of Finland and Germany");
@@ -65,6 +100,18 @@ public class ImageHandler extends Application
 
        // Create a Scene with the GridPane as its root node.
        Scene scene = new Scene(gridpane);
+
+
+       // ADD
+       scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+           @Override
+           public void handle(KeyEvent keyEvent) {
+               System.out.println(keyEvent.getText());
+           }
+       });
+
+
+       
 
        // Add the Scene to the Stage.
        primaryStage.setScene(scene);

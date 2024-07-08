@@ -19,6 +19,9 @@ public class CmptStudent extends Student
    public CmptStudent(String n, String id, int year)
    {
       super(n, id, year);
+      mathCredits = 0;
+      csCredits = 0;
+      genEdCredits = 0;
    }
 
 
