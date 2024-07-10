@@ -21,16 +21,31 @@ public class CSSDemo1 extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         Label l = new Label("Hello World");
+
+
+
+        // Add a style class to the label
         l.getStyleClass().add("labels");
+
+
+
 
         VBox vbox = new VBox(l);
         vbox.setAlignment(Pos.CENTER);
-        vbox.setId("customvb");
-        Scene scene = new Scene(vbox,640,480);
 
+
+
+
+        // add a style id to the vbox
+        vbox.setId("customvb");
+
+
+
+
+
+        Scene scene = new Scene(vbox,640,480);
         scene.getStylesheets().add("file:css/demo1.css");
         primaryStage.setScene(scene);
-
         primaryStage.show();
 
     }
