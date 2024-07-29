@@ -58,7 +58,8 @@ public class HelloApplication extends Application {
                     String user = "user";
                     String password = "password";
                     String auth = user + ":" + password;
-                    byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.UTF_8));
+                    byte[] encodedAuth = Base64.getEncoder().encodeToString(auth.getBytes(StandardCharsets.UTF_8)).getBytes();
+                    //byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.UTF_8));
                     String authHeaderValue = "Basic " + new String(encodedAuth);
                     connection.setRequestProperty("Authorization", authHeaderValue);
 

@@ -37,7 +37,7 @@ public class BasicAuthConfig {
         auth.inMemoryAuthentication()
                 .passwordEncoder(PasswordEncoderConfig.passwordEncoder())
                 .withUser("bobbyc")
-                .password(PasswordEncoderConfig.passwordEncoder().encode("password"))
+                .password(PasswordEncoderConfig.passwordEncoder().encode(System.getenv("PWD")))
                 .roles("ADMIN");
     }
 
